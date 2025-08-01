@@ -4,6 +4,7 @@ import { Clock, CheckCircle, Users, Award, ArrowRight, Phone, Mail, MapPin, Cale
 import Footer from "./Footer.jsx"
 import Service from "./Service.jsx"
 import Review from "./Review.jsx"
+import ImgHome from '../assets/home.jpeg'
 
 function Home() {
   const services = [
@@ -188,7 +189,7 @@ function Home() {
               className="relative"
             >
               <img
-                src="https://lancebase.io/wp-content/uploads/2022/12/freelance-c-developer-hourly-rate.jpeg"
+                src={ImgHome}
                 alt="Professional team working"
                 className="rounded-lg shadow-2xl h-[500px] w-full object-cover" // Added w-full object-cover for better responsiveness
               />
