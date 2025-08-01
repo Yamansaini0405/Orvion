@@ -1,11 +1,11 @@
 "use client"
-
 import React from "react"
-import Profile from "../assets/profile.jpeg"
 import { User, Star } from "lucide-react"
 import { motion } from "framer-motion"
+import Profile from "../assets/profile.jpeg"
 
-const personPlaceholder = "../assets/profile.jpeg"
+// Placeholder image for profile pictures
+const personPlaceholder = "/placeholder.svg?height=40&width=40"
 
 const testimonials = [
   {
@@ -41,21 +41,57 @@ const testimonials = [
 ]
 
 const Review = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  }
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  }
+
   return (
     <div className="w-full py-10 ">
       <div className="max-w-7xl mx-auto p-4">
-        <div className="flex justify-center md:justify-start items-center h-fit">
-          <p className="flex justify-start items-center border border-gray-300 px-3 rounded-lg text-xs gap-1 mb-4 py-1 text-gray-700 font-semibold">
+        <motion.div
+          className="flex justify-center md:justify-start items-center h-fit"
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.5 }}
+          variants={containerVariants}
+        >
+          <motion.p
+            variants={itemVariants}
+            className="flex justify-start items-center border border-gray-300 px-3 rounded-lg text-xs gap-1 mb-4 py-1 text-gray-700 font-semibold"
+          >
             <User size={12} />
             <span className="text-xs -translate-y-[1px] font-semibold">Customers</span>
-          </p>
-        </div>
-        <h1 className="text-center md:text-left text-4xl md:text-5xl/tight font-bold capitalize mb-2 text-gray-900">
+          </motion.p>
+        </motion.div>
+        <motion.h1
+          className="text-center md:text-left text-4xl md:text-5xl/tight font-bold capitalize mb-2 text-gray-900"
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.5 }}
+          variants={itemVariants}
+        >
           What people say
-        </h1>
-        <p className="text-sm md:text-lg text-center md:text-left text-gray-500 mb-6 md:mb-10">
+        </motion.h1>
+        <motion.p
+          className="text-sm md:text-lg text-center md:text-left text-gray-500 mb-6 md:mb-10"
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.5 }}
+          variants={itemVariants}
+        >
           Here's what some of our customers say about our platform.
-        </p>
+        </motion.p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 overflow-hidden h-[40rem] p-4">
           <TestimonialsColumn testimonials={testimonials} duration={15} />
           <TestimonialsColumn testimonials={testimonials} className="hidden md:block" duration={19} />
@@ -83,9 +119,11 @@ const TestimonialsColumn = (props) => (
       {[...new Array(2)].fill(0).map((_, index) => (
         <React.Fragment key={index}>
           {props.testimonials.map(({ text, imageSrc, name, position }, idx) => (
-            <div
+            <motion.div
               key={idx}
               className="w-full rounded-2xl shadow-lg p-5 flex flex-col justify-between gap-3 bg-white border border-gray-200"
+              whileHover={{ scale: 1.02, boxShadow: "0px 5px 15px rgba(0, 0, 0, 0.1)" }}
+              transition={{ duration: 0.2 }}
             >
               <div className="flex gap-1 justify-start items-center">
                 <Star className="text-indigo-500" fill="currentColor" />
@@ -93,20 +131,12 @@ const TestimonialsColumn = (props) => (
                 <Star className="text-indigo-500" fill="currentColor" />
                 <Star className="text-indigo-500" fill="currentColor" />
                 <Star className="text-indigo-500" fill="currentColor" />
-
                 <p className="text-md text-gray-900 font-bold">4.8</p>
               </div>
               <p className="font-sans italic text-sm text-gray-700">{text}</p>
               <div className="flex gap-4 items-center">
-                {/* <Image
-                  src={imageSrc || "/placeholder.svg"}
-                  alt={`Profile picture of ${name}`}
-                  className="rounded-full h-10 w-10 object-cover"
-                  width={40}
-                  height={40}
-                /> */}
                 <img
-                  src={Profile || imageSrc}
+                  src={Profile || "/placeholder.svg"} // Use imageSrc directly from testimonial data
                   alt={`Profile picture of ${name}`}
                   className="rounded-full h-10 w-10 object-cover"
                 />
@@ -115,7 +145,7 @@ const TestimonialsColumn = (props) => (
                   <p className="text-xs font-light text-gray-600">{position}</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </React.Fragment>
       ))}

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Logo from '../assets/Orvion.png'; 
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,11 +19,11 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-12">
-            <a href="#" className="text-gray-600 hover:text-gray-900 hover:font-semibold transition-transform text-[1.1rem] ">Home</a>
-            <a href="#" className="text-gray-600 hover:text-gray-900 hover:font-semibold transition-transform text-[1.1rem]">Services</a>
-            <a href="#" className="text-gray-600 hover:text-gray-900 hover:font-semibold transition-transform text-[1.1rem]">Our Processes</a>
-            <a href="#" className="text-gray-600 hover:text-gray-900 hover:font-semibold transition-transform text-[1.1rem]">About</a>
-            <a href="#" className="text-gray-600 hover:text-gray-900 hover:font-semibold transition-transform text-[1.1rem]">Contact</a>
+            <a href="#" className="text-gray-600 hover:text-gray-900 hover:font-semibold transition-transform text-[1.1rem]  outline-none">Home</a>
+            <a href="#" className="text-gray-600 hover:text-gray-900 hover:font-semibold transition-transform text-[1.1rem] outline-none">Services</a>
+            <a href="#" className="text-gray-600 hover:text-gray-900 hover:font-semibold transition-transform text-[1.1rem] outline-none">Our Processes</a>
+            <a href="#" className="text-gray-600 hover:text-gray-900 hover:font-semibold transition-transform text-[1.1rem] outline-none">About</a>
+            <a href="#" className="text-gray-600 hover:text-gray-900 hover:font-semibold transition-transform text-[1.1rem] outline-none">Contact</a>
           </div>
 
           {/* CTA Button - Desktop */}
