@@ -9,9 +9,6 @@ const Navbar = () => {
         <div className=" mx-auto flex items-center justify-between space-x-4">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            {/* <div className="w-12 h-[100%] rounded-full flex items-center justify-center">
-             <img src={Logo} alt="Logo" className="object-fill" />
-            </div> */}
             <span className="text-2xl font-semibold text-gray-900">
               O<span className="text-blue-600 font-bold">rvion</span>
             </span>

@@ -7,50 +7,6 @@ import Review from "./Review.jsx"
 import ImgHome from '../assets/home.jpeg'
 
 function Home() {
-  const services = [
-    {
-      title: "Web Development",
-      description: "Custom websites and web applications built with modern technologies",
-      icon: "💻",
-      features: ["Responsive Design", "SEO Optimized", "Fast Loading", "Mobile First"],
-      deliveryTime: "7-14 days",
-    },
-    {
-      title: "Mobile App Development",
-      description: "Native and cross-platform mobile applications for iOS and Android",
-      icon: "📱",
-      features: ["Cross Platform", "Native Performance", "App Store Ready", "Push Notifications"],
-      deliveryTime: "14-21 days",
-    },
-    {
-      title: "Digital Marketing",
-      description: "Complete digital marketing solutions to grow your online presence",
-      icon: "📈",
-      features: ["SEO Strategy", "Social Media", "Content Marketing", "Analytics"],
-      deliveryTime: "5-10 days",
-    },
-    {
-      title: "Graphic Design",
-      description: "Professional design services for branding and marketing materials",
-      icon: "🎨",
-      features: ["Logo Design", "Brand Identity", "Print Design", "Digital Assets"],
-      deliveryTime: "3-7 days",
-    },
-    {
-      title: "E-commerce Solutions",
-      description: "Complete online store setup with payment integration and inventory management",
-      icon: "🛒",
-      features: ["Payment Gateway", "Inventory System", "Order Management", "Analytics"],
-      deliveryTime: "10-18 days",
-    },
-    {
-      title: "Consulting Services",
-      description: "Strategic business and technology consulting to optimize your operations",
-      icon: "💡",
-      features: ["Business Strategy", "Tech Consulting", "Process Optimization", "Growth Planning"],
-      deliveryTime: "2-5 days",
-    },
-  ]
   const process = [
     {
       step: 1,
@@ -77,29 +33,7 @@ function Home() {
       icon: <CheckCircle className="h-8 w-8" />,
     },
   ]
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      company: "TechStart Inc.",
-      text: "They delivered our e-commerce platform 2 days ahead of schedule. The quality exceeded our expectations!",
-      rating: 5,
-      project: "E-commerce Website",
-    },
-    {
-      name: "Michael Chen",
-      company: "Digital Solutions",
-      text: "Professional team with excellent communication. They understood our requirements perfectly.",
-      rating: 5,
-      project: "Mobile App Development",
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "Creative Agency",
-      text: "Outstanding work on our rebranding project. They captured our vision and delivered on time.",
-      rating: 5,
-      project: "Brand Identity Design",
-    },
-  ]
+
 
   const stats = [
     { number: "500+", label: "Projects Completed" },
@@ -304,7 +238,7 @@ function Home() {
               commitment to your success.
             </motion.p>
           </motion.div>
-          {/* Main Features - Single Horizontal Line */}
+          {/* Main Features */}
           <motion.div
             className="flex flex-col md:flex-row gap-8 mb-16"
             initial="hidden"

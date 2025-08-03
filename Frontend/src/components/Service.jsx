@@ -2,7 +2,6 @@
 import { useState, useRef, useEffect } from "react"
 import { motion } from "framer-motion" // Import motion
 import { Clock, CheckCircle, ChevronLeft, ChevronRight, Star } from "lucide-react"
-// import Img1 from '../assets/webDevelopment.png'; // This import is not used, replaced by direct URLs
 
 function Service() {
   const scrollContainerRef = useRef(null)
@@ -211,7 +210,7 @@ function Service() {
                   <img
                     src={service.image || "/placeholder.svg"}
                     alt={service.title}
-                    className="w-full h-full object-cover" // Changed object-fit to object-cover for better image handling
+                    className="w-full h-full object-cover"
                   />
                   <div className="absolute top-3 left-3">
                     <span className="bg-white px-2 py-1 rounded-full text-xs font-medium text-gray-700">
