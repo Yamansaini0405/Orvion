@@ -5,8 +5,8 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-white px-4 md:px-16 py-4.5 w-[90%] mx-auto rounded-xl  sticky top-2 z-50 shadow-md mt-4 ">
-        <div className=" mx-auto flex items-center justify-between space-x-4">
+      <nav className="bg-white px-4 md:px-16 py-4.5 w-[90%] mx-auto rounded-xl sticky top-2 z-50 shadow-md mt-4">
+        <div className="mx-auto flex items-center justify-between space-x-4">
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <span className="text-2xl font-semibold text-gray-900">
@@ -16,7 +16,7 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-12">
-            <a href="#" className="text-gray-600 hover:text-gray-900 hover:font-semibold transition-transform text-[1.1rem]  outline-none">Home</a>
+            <a href="#" className="text-gray-600 hover:text-gray-900 hover:font-semibold transition-transform text-[1.1rem] outline-none">Home</a>
             <a href="#" className="text-gray-600 hover:text-gray-900 hover:font-semibold transition-transform text-[1.1rem] outline-none">Services</a>
             <a href="#" className="text-gray-600 hover:text-gray-900 hover:font-semibold transition-transform text-[1.1rem] outline-none">Our Processes</a>
             <a href="#" className="text-gray-600 hover:text-gray-900 hover:font-semibold transition-transform text-[1.1rem] outline-none">About</a>
@@ -41,24 +41,24 @@ const Navbar = () => {
       </nav>
 
       {/* Mobile Menu */}
-      {isMenuOpen && (
-        <>
-          {/* Overlay */}
-          <div 
-            className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
-            onClick={() => setIsMenuOpen(false)}
-          ></div>
-          
-          {/* Slide-out Menu */}
-          <div className="fixed top-0 left-0 h-full w-64 bg-white shadow-lg z-50 md:hidden">
+      <>
+        {/* Overlay */}
+        <div 
+          className={`fixed inset-0  z-40 md:hidden transition-all duration-300 ease-in-out ${
+            isMenuOpen ? 'bg-opacity-50 visible' : 'bg-opacity-0 invisible'
+          }`}
+          onClick={() => setIsMenuOpen(false)}
+        ></div>
+        
+        {/* Slide-out Menu */}
+        <div className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50 md:hidden transform transition-all duration-300 ease-in-out ${
+          isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}>
             <div className="p-4 border-b border-gray-100">
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-2">
-                  <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                  </div>
                   <span className="text-lg font-semibold text-gray-900">
-                    space<span className="text-blue-600">lance</span>
+                    O<span className="text-blue-600 font-bold">rvion</span>
                   </span>
                 </div>
                 <button 
@@ -74,20 +74,20 @@ const Navbar = () => {
             
             <div className="p-4 space-y-4">
               <a href="#" className="block text-blue-600 font-medium py-2">Home</a>
-              <a href="#" className="block text-gray-600 hover:text-gray-900 py-2">Find work</a>
-              <a href="#" className="block text-gray-600 hover:text-gray-900 py-2">Find Freelancers</a>
-              <a href="#" className="block text-gray-600 hover:text-gray-900 py-2">Log In</a>
-              <a href="#" className="block text-gray-600 hover:text-gray-900 py-2">Sign Up</a>
+              <a href="#" className="block text-gray-600 hover:text-gray-900 py-2">Services</a>
+              <a href="#" className="block text-gray-600 hover:text-gray-900 py-2">Our Processes</a>
+              <a href="#" className="block text-gray-600 hover:text-gray-900 py-2">About</a>
+              <a href="#" className="block text-gray-600 hover:text-gray-900 py-2">Contact</a>
               
               <div className="pt-4 border-t border-gray-100">
                 <button className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-medium transition-colors">
-                  Post a project
+                  Get Call
                 </button>
               </div>
             </div>
           </div>
         </>
-      )}
+      
     </>
   );
 };
