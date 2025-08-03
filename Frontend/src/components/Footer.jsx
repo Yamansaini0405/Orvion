@@ -28,7 +28,7 @@ const Footer = () => {
 
   return (
     <motion.footer
-      className="w-full bg-gray-900 rounded-t-3xl h-fit p-5 pt-10"
+      className="w-full bg-gray-900 rounded-t-3xl h-fit p-5 md:pt-10"
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.3 }}
@@ -42,7 +42,7 @@ const Footer = () => {
           <motion.img variants={itemVariants} src={img} alt="Orvion Logo" className="w-40 h-40" />
           <motion.h1
             variants={itemVariants}
-            className="text-2xl md:text-3xl text-white font-semibold capitalize mt-4 md:mt-0"
+            className="text-2xl md:text-3xl text-white font-semibold capitalize m-4 md:mt-0"
           >
             Job well-done.
           </motion.h1>

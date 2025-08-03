@@ -71,7 +71,7 @@ function Home() {
   return (
     <>
       <section className="bg-gradient-to-r from-blue-50 to-indigo-100 py-16 mt-2">
-        <div className="max-w-[90%] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="md:max-w-[90%] max-w-[95%] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial="hidden"
@@ -132,7 +132,7 @@ function Home() {
                 whileInView="show"
                 viewport={{ once: true, amount: 0.8 }}
                 variants={cardVariants}
-                className="absolute -bottom-10 -left-12 bg-white p-6 rounded-lg shadow-lg"
+                className="absolute -bottom-10 md:-bottom-10 -left-4 md:-left-12 bg-white p-6 rounded-lg shadow-lg"
               >
                 <div className="flex items-center space-x-4">
                   <div className="bg-green-100 p-3 rounded-full">
@@ -558,7 +558,7 @@ function Home() {
 
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="md:max-w-[90%] max-w-[95%] mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
             initial="hidden"
@@ -624,7 +624,7 @@ function Home() {
               whileInView="show"
               viewport={{ once: true, amount: 0.5 }}
               variants={containerVariants}
-              className="bg-white p-8 rounded-xl shadow-lg"
+              className="bg-white md:p-8 p-4 rounded-xl shadow-lg"
             >
               <motion.h3 variants={itemVariants} className="text-2xl font-semibold text-gray-900 mb-6">
                 Send us a Message
