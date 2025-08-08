@@ -9,8 +9,8 @@ const Navbar = () => {
         <div className="mx-auto flex items-center justify-between space-x-4">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <span className="text-2xl font-semibold text-gray-900">
-              O<span className="text-blue-600 font-bold">rvion</span>
+            <span className="text-2xl font-bold text-gray-900">
+              Y<span className="text-blue-600 font-bold">a</span>Y 
             </span>
           </div>
 

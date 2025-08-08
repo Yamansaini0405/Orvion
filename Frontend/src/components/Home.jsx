@@ -5,6 +5,7 @@ import Footer from "./Footer.jsx"
 import Service from "./Service.jsx"
 import Review from "./Review.jsx"
 import ImgHome from '../assets/home.jpeg'
+import Projects from "./Projects.jsx"
 
 function Home() {
   const process = [
@@ -36,9 +37,9 @@ function Home() {
 
 
   const stats = [
-    { number: "500+", label: "Projects Completed" },
+    { number: "100+", label: "Projects Completed" },
     { number: "98%", label: "On-Time Delivery" },
-    { number: "200+", label: "Happy Clients" },
+    { number: "90+", label: "Happy Clients" },
     { number: "24/7", label: "Support Available" },
   ]
 
@@ -386,175 +387,11 @@ function Home() {
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section className="py-20 bg-gradient-to-br ">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            className="text-center mb-16"
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.5 }}
-            variants={containerVariants}
-          >
-            <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Clients only pay after hiring
-            </motion.h2>
-            <motion.p variants={itemVariants} className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose the perfect plan for your business needs. No upfront costs, pay only when you find the right
-              talent.
-            </motion.p>
-          </motion.div>
-          <motion.div
-            className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={containerVariants}
-          >
-            {/* Marketplace Plan */}
-            <motion.div
-              variants={itemVariants}
-              whileHover={{ scale: 1.03, boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.1)" }}
-              className="relative bg-white rounded-2xl shadow-xl border-2 border-blue-400 p-8 transform transition-all duration-300"
-            >
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                  Most Popular
-                </span>
-              </div>
-              <div className="text-center mb-8">
-                <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">MARKETPLACE</h3>
-                <div className="mb-4">
-                  <span className="text-4xl font-bold text-gray-900">5%</span>
-                  <span className="text-xl text-gray-600 ml-2">fee after hiring</span>
-                </div>
-                <p className="text-gray-600">For starting out on our global freelancer marketplace</p>
-              </div>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Free to post jobs on our global freelance marketplace</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">AI-powered features</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Collaboration and project tracking tools</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Basic customer support</span>
-                </li>
-              </ul>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-full bg-blue-600 text-white py-4 rounded-xl font-semibold hover:bg-blue-700 transition-colors duration-200 shadow-lg"
-              >
-                Get started for free
-              </motion.button>
-            </motion.div>
-            {/* Business Plus Plan */}
-            <motion.div
-              variants={itemVariants}
-              whileHover={{ scale: 1.03, boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.1)" }}
-              className="relative bg-white rounded-2xl shadow-lg border-2 border-gray-900 p-8 transform transition-all duration-300"
-            >
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <span className="bg-gray-900 text-white px-4 py-2 rounded-full text-sm font-semibold">Popular</span>
-              </div>
-              <div className="text-center mb-8">
-                <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">BUSINESS PLUS</h3>
-                <div className="mb-4">
-                  <span className="text-4xl font-bold text-gray-900">10%</span>
-                  <span className="text-xl text-gray-600 ml-2">fee after hiring</span>
-                </div>
-                <p className="text-gray-600">For growing businesses with premium features and support</p>
-              </div>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Access to pre-screened top 1% of talent</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Premium customer support 24/7</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">60 invites per job post</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Advanced analytics and reporting</span>
-                </li>
-              </ul>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-full border-2 border-gray-900 text-gray-900 py-4 rounded-xl font-semibold hover:bg-gray-900 hover:text-white transition-colors duration-200"
-              >
-                Get started for free
-              </motion.button>
-            </motion.div>
-            {/* Enterprise Plan */}
-            <motion.div
-              variants={itemVariants}
-              whileHover={{ scale: 1.03, boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.1)" }}
-              className="relative bg-white rounded-2xl shadow-lg border-2 border-blue-400 p-8 transform transition-all duration-300"
-            >
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">Enterprise</span>
-              </div>
-              <div className="text-center mb-8">
-                <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">ENTERPRISE</h3>
-                <div className="mb-4">
-                  <span className="text-4xl font-bold text-gray-900">Contact sales</span>
-                </div>
-                <p className="text-gray-600">For scaling comprehensive solutions to the entire organization</p>
-              </div>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Dedicated account and program management</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">SSO and integrations</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Unlimited invites per job</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Custom contracts and billing</span>
-                </li>
-              </ul>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-full border-2 border-blue-600 text-blue-600 py-4 rounded-xl font-semibold hover:bg-blue-600 hover:text-white transition-colors duration-200"
-              >
-                Contact sales
-              </motion.button>
-            </motion.div>
-          </motion.div>
-          <motion.div
-            className="text-center mt-12"
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.5 }}
-            variants={itemVariants}
-          >
-            <a href="#" className="text-blue-600 hover:text-blue-700 font-semibold text-lg hover:underline">
-              Compare all plan features →
-            </a>
-          </motion.div>
-        </div>
-      </section>
+
+     
+
+      {/* {Recent projects section} */}
+      <Projects />
 
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-gray-50">
