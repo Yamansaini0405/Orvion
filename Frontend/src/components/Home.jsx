@@ -6,6 +6,7 @@ import Service from "./Service.jsx"
 import Review from "./Review.jsx"
 import ImgHome from '../assets/home.jpeg'
 import Projects from "./Projects.jsx"
+import Workplace from "./Workplace.jsx"
 
 function Home() {
   const process = [
@@ -71,7 +72,7 @@ function Home() {
 
   return (
     <>
-      <section className="bg-gradient-to-r from-blue-50 to-indigo-100 md:py-16 py-8 mt-2">
+      <section id="home" className="bg-gradient-to-r from-blue-50 to-indigo-100 md:py-16 py-8 mt-2">
         <div className="md:max-w-[90%] max-w-[95%] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -151,7 +152,7 @@ function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-gray-900 text-white mt-2">
+      <section id="stats" className="py-16 bg-gray-900 text-white mt-2">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
@@ -527,6 +528,7 @@ function Home() {
           </div>
         </div>
       </section>
+      <Workplace/>
       <Footer />
     </>
   )

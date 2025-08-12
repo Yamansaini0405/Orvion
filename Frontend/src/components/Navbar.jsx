@@ -3,6 +3,13 @@ import React, { useState } from 'react';
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const scrollToSection = (id) => {
+    document.getElementById(id).scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
   return (
     <>
       <nav className="bg-white px-4 md:px-16 py-4.5 w-[90%] mx-auto rounded-xl sticky top-2 z-50 shadow-md mt-4">
@@ -17,10 +24,24 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-12">
             <a href="#" className="text-gray-600 hover:text-gray-900 hover:font-semibold transition-transform text-[1.1rem] outline-none">Home</a>
-            <a href="#" className="text-gray-600 hover:text-gray-900 hover:font-semibold transition-transform text-[1.1rem] outline-none">Services</a>
-            <a href="#" className="text-gray-600 hover:text-gray-900 hover:font-semibold transition-transform text-[1.1rem] outline-none">Our Processes</a>
-            <a href="#" className="text-gray-600 hover:text-gray-900 hover:font-semibold transition-transform text-[1.1rem] outline-none">About</a>
-            <a href="#" className="text-gray-600 hover:text-gray-900 hover:font-semibold transition-transform text-[1.1rem] outline-none">Contact</a>
+            <button onClick={() => scrollToSection("services")}>
+              <span className="text-gray-600 hover:text-gray-900 hover:font-semibold transition-transform text-[1.1rem] outline-none">Services</span>
+            </button>
+
+            <button onClick={() => scrollToSection("process")}>
+              <span className="text-gray-600 hover:text-gray-900 hover:font-semibold transition-transform text-[1.1rem] outline-none">Our Processes</span>
+            </button>
+
+            <button onClick={() => scrollToSection("portfolio")}>
+              <span className="text-gray-600 hover:text-gray-900 hover:font-semibold transition-transform text-[1.1rem] outline-none">Portfolio</span>
+            </button>
+
+            <button onClick={() => scrollToSection("contact")}>
+              <span className="text-gray-600 hover:text-gray-900 hover:font-semibold transition-transform text-[1.1rem] outline-none">Contact</span>
+            </button>
+            <button onClick={() => scrollToSection("workspace")}>
+              <span className="text-gray-600 hover:text-gray-900 hover:font-semibold transition-transform text-[1.1rem] outline-none">Workspace</span>
+            </button>
           </div>
 
           {/* CTA Button - Desktop */}
@@ -78,6 +99,7 @@ const Navbar = () => {
               <a href="#" className="block text-gray-600 hover:text-gray-900 py-2">Our Processes</a>
               <a href="#" className="block text-gray-600 hover:text-gray-900 py-2">About</a>
               <a href="#" className="block text-gray-600 hover:text-gray-900 py-2">Contact</a>
+               <a href="#" className="block text-gray-600 hover:text-gray-900 py-2">Workplace</a>
               
               <div className="pt-4 border-t border-gray-100">
                 <button className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-medium transition-colors">
