@@ -114,7 +114,7 @@ function Workplace() {
                   href="https://www.google.com/maps/dir//Second+Floor,+Plot,+WFH+Co-working+space%2F+Conference+Room%2F+Day+Pass+%26+office+Space,+27,+Mall+Rd,+opposite+Raison+Armor+society,+Ahinsa+Khand+2,+Indirapuram,+Ghaziabad,+Uttar+Pradesh+201014/@28.6390695,77.3490999,14.27z/data=!4m8!4m7!1m0!1m5!1m1!1s0x390cf10063d3a6f1:0xe6827a21ff62abef!2m2!1d77.3826488!2d28.6407957?entry=ttu&g_ep=EgoyMDI1MDgwNi4wIKXMDSoASAFQAw%3D%3D"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center  bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-700 transition-colors duration-200 shadow-lg"
+                  className="inline-flex items-center  bg-black text-white px-8 py-4 rounded-xl font-semibold hover:bg-gray-900 transition-colors duration-200 shadow-lg"
                 >
                   <MapPin className="h-5 w-5 mr-3" />
                   Get Directions

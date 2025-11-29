@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Logo2 from "../assets/Logo2.png"
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,13 +13,11 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-white px-4 md:px-16 py-4.5 w-[90%] mx-auto rounded-xl sticky top-2 z-50 shadow-md mt-4">
+      <nav className="bg-white px-4 md:px-16 py-2.5 w-[90%] mx-auto rounded-xl sticky top-2 z-50 shadow-md mt-4">
         <div className="mx-auto flex items-center justify-between space-x-4">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <span className="text-2xl font-bold text-gray-900">
-              Y<span className="text-blue-600 font-bold">a</span>Y 
-            </span>
+            <img src={Logo2} alt="YAY Tech Logo" className='w-40 h-16' />
           </div>
 
           {/* Desktop Navigation */}
@@ -45,7 +44,7 @@ const Navbar = () => {
           </div>
 
           {/* CTA Button - Desktop */}
-          <button className="hidden md:block bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg font-medium transition-colors">
+          <button className="hidden md:block bg-black hover:bg-gray-900 text-white px-5 py-2 rounded-lg font-medium transition-colors">
             Get Call
           </button>
 

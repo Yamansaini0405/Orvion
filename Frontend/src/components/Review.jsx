@@ -69,7 +69,7 @@ const Review = () => {
         >
           <motion.p
             variants={itemVariants}
-            className="flex justify-start items-center border border-gray-300 px-3 rounded-lg text-xs gap-1 mb-4 py-1 text-gray-700 font-semibold"
+            className="flex justify-start items-center border border-gray-300 px-3 rounded-lg text-xs gap-1 mb-4 py-1 text-gray-900 font-semibold"
           >
             <User size={12} />
             <span className="text-xs -translate-y-[1px] font-semibold">Customers</span>
@@ -85,7 +85,7 @@ const Review = () => {
           What people say
         </motion.h1>
         <motion.p
-          className="text-sm md:text-lg text-center md:text-left text-gray-500 mb-6 md:mb-10"
+          className="text-sm md:text-lg text-center md:text-left text-gray-700 mb-6 md:mb-10"
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.5 }}

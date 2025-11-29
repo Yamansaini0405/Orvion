@@ -72,7 +72,7 @@ function Home() {
 
   return (
     <>
-      <section id="home" className="bg-gradient-to-r from-blue-50 to-indigo-100 md:py-16 py-8 mt-2">
+      <section id="home" className="bg-white md:py-16 py-8 mt-2">
         <div className="md:max-w-[90%] max-w-[95%] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -81,9 +81,9 @@ function Home() {
               viewport={{ once: true, amount: 0.5 }}
               variants={containerVariants}
             >
-              <motion.h1 variants={itemVariants} className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              <motion.h1 variants={itemVariants} className="text-4xl md:text-6xl font-bold text-black mb-6">
                 We Deliver Your Projects
-                <span className="text-blue-600"> On Time</span>,<span className="text-blue-600"> Every Time</span>
+                <span className="text-black"> On Time</span>,<span className="text-black"> Every Time</span>
               </motion.h1>
               <motion.p variants={itemVariants} className="text-xl text-gray-600 mb-8">
                 Professional project delivery services with guaranteed deadlines. We approach clients, understand their
@@ -93,7 +93,7 @@ function Home() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 font-medium flex items-center justify-center"
+                  className="bg-black text-white px-8 py-4 rounded-lg hover:bg-gray-900 font-medium flex items-center justify-center"
                 >
                   Start Your Project
                   <ArrowRight className="ml-2 h-5 w-5" />
@@ -101,7 +101,7 @@ function Home() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 font-medium"
+                  className="border-2 border-black text-black px-8 py-4 rounded-lg hover:bg-gray-100 font-medium"
                 >
                   View Our Work
                 </motion.button>
@@ -112,7 +112,7 @@ function Home() {
                   <span>100% Quality Guaranteed</span>
                 </div>
                 <div className="flex items-center">
-                  <Clock className="h-5 w-5 text-blue-500 mr-2" />
+                  <Clock className="h-5 w-5 text-black mr-2" />
                   <span>On-Time Delivery</span>
                 </div>
               </motion.div>
@@ -152,7 +152,7 @@ function Home() {
       </section>
 
       {/* Stats Section */}
-      <section id="stats" className="py-16 bg-gray-900 text-white mt-2">
+      <section id="stats" className="py-16 bg-black text-white mt-2">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
@@ -163,7 +163,7 @@ function Home() {
           >
             {stats.map((stat, index) => (
               <motion.div key={index} variants={itemVariants}>
-                <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">{stat.number}</div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-gray-300">{stat.label}</div>
               </motion.div>
             ))}
@@ -200,10 +200,10 @@ function Home() {
           >
             {process.map((step) => (
               <motion.div key={step.step} variants={itemVariants} className="text-center">
-                <div className="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="bg-black text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                   {step.icon}
                 </div>
-                <div className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center mx-auto mb-4 text-sm font-bold">
+                <div className="bg-black text-white w-8 h-8 rounded-full flex items-center justify-center mx-auto mb-4 text-sm font-bold">
                   {step.step}
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">{step.title}</h3>
@@ -218,7 +218,7 @@ function Home() {
       <Review />
 
       {/* Why Choose Us */}
-      <section className="py-4 bg-gray-900">
+      <section className="py-4 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <motion.div
@@ -230,7 +230,7 @@ function Home() {
           >
             <motion.div
               variants={itemVariants}
-              className="inline-flex items-center gap-2 bg-blue-50 text-blue-600 px-8 py-4 rounded-full text-xl font-medium my-10"
+              className="inline-flex items-center gap-2 bg-blue-50 text-black px-8 py-4 rounded-full text-xl font-medium my-10"
             >
               <CheckCircle className="w-4 h-4" />
               Why Choose Orvion
@@ -423,27 +423,27 @@ function Home() {
               </motion.h3>
               <motion.div variants={containerVariants} className="space-y-6">
                 <motion.div variants={itemVariants} className="flex items-center">
-                  <Phone className="h-6 w-6 text-blue-600 mr-4" />
+                  <Phone className="h-6 w-6 text-black mr-4" />
                   <div>
                     <div className="font-medium text-gray-900">Phone</div>
-                    <div className="text-gray-600">+1 (234) 567-890</div>
+                    <div className="text-gray-600">+91 8941092513</div>
                   </div>
                 </motion.div>
                 <motion.div variants={itemVariants} className="flex items-center">
-                  <Mail className="h-6 w-6 text-blue-600 mr-4" />
+                  <Mail className="h-6 w-6 text-black mr-4" />
                   <div>
                     <div className="font-medium text-gray-900">Email</div>
-                    <div className="text-gray-600">hello@projectpro.com</div>
+                    <div className="text-gray-600">business@yaytech.in</div>
                   </div>
                 </motion.div>
                 <motion.div variants={itemVariants} className="flex items-center">
-                  <MapPin className="h-6 w-6 text-blue-600 mr-4" />
+                  <MapPin className="h-6 w-6 text-black mr-4" />
                   <div>
                     <div className="font-medium text-gray-900">Office</div>
                     <div className="text-gray-600">
-                      123 Business Ave, Suite 100
+                      Indirapuram, Ghaziabad
                       <br />
-                      New York, NY 10001
+                      Uttar Pradesh, India
                     </div>
                   </div>
                 </motion.div>
@@ -473,7 +473,7 @@ function Home() {
                     <label className="block text-sm font-medium text-gray-700 mb-2">First Name</label>
                     <input
                       type="text"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg "
                       placeholder="John"
                     />
                   </div>
@@ -481,7 +481,7 @@ function Home() {
                     <label className="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
                     <input
                       type="text"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg "
                       placeholder="Doe"
                     />
                   </div>
@@ -490,13 +490,13 @@ function Home() {
                   <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
                   <input
                     type="email"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg "
                     placeholder="john@example.com"
                   />
                 </motion.div>
                 <motion.div variants={itemVariants}>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Project Type</label>
-                  <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                  <select className="w-full px-4 py-3 border border-gray-300 rounded-lg ">
                     <option>Select a service</option>
                     <option>Web Development</option>
                     <option>Mobile App Development</option>
@@ -510,7 +510,7 @@ function Home() {
                   <label className="block text-sm font-medium text-gray-700 mb-2">Project Details</label>
                   <textarea
                     rows={4}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg "
                     placeholder="Tell us about your project requirements and timeline..."
                   ></textarea>
                 </motion.div>
@@ -519,7 +519,7 @@ function Home() {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   type="submit"
-                  className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 font-medium"
+                  className="w-full bg-black text-white py-3 rounded-lg hover:bg-gray-900 font-medium"
                 >
                   Send Message
                 </motion.button>

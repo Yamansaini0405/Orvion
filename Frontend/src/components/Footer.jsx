@@ -1,6 +1,6 @@
 "use client"
 import { motion } from "framer-motion"
-import img from "../assets/logoFooter2.png"
+import Logo2 from "../assets/Logo.png"
 import { FaGooglePlay, FaAppStoreIos, FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa"
 import { FaSquareXTwitter } from "react-icons/fa6"
 
@@ -28,7 +28,7 @@ const Footer = () => {
 
   return (
     <motion.footer
-      className="w-full bg-gray-900 rounded-t-3xl h-fit p-5 md:pt-10"
+      className="w-full bg-black rounded-t-3xl h-fit p-5 md:pt-10"
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.3 }}
@@ -39,7 +39,7 @@ const Footer = () => {
           variants={itemVariants}
           className="flex flex-col md:flex-row justify-between items-center text-center md:text-left"
         >
-          <motion.img variants={itemVariants} src={img} alt="Orvion Logo" className="w-40 h-40" />
+          <motion.img variants={itemVariants} src={Logo2} alt="Orvion Logo" className="w-48 h-16 bg-white my-6" />
           <motion.h1
             variants={itemVariants}
             className="text-2xl md:text-3xl text-white font-semibold capitalize m-4 md:mt-0"
@@ -141,10 +141,10 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Contacts</h3>
             <ul className="flex flex-col gap-2 text-sm">
               <motion.li whileHover={{ x: 5 }} className="hover:text-gray-300 cursor-pointer">
-                +91 620-382-1043
+                +91 8941092513
               </motion.li>
               <motion.li whileHover={{ x: 5 }} className="hover:text-gray-300 cursor-pointer">
-                anissh946@gmail.com
+                business@yaytech.in
               </motion.li>
             </ul>
           </motion.div>
@@ -165,7 +165,7 @@ const Footer = () => {
           variants={itemVariants}
           className="border-t-2 max-w-7xl mx-auto border-gray-200 py-5 flex flex-col md:flex-row justify-between items-center"
         >
-          <p className="text-white text-sm">©2025 Orvion Technologies Ltd.</p>
+          <p className="text-white text-sm">©2025 YAY Tech Solutions.</p>
           <ul className="text-white flex gap-3 text-xl mt-4 md:mt-0">
             <motion.li variants={iconVariants} whileHover="hover" className="cursor-pointer">
               <FaFacebook />

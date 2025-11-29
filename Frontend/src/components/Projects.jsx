@@ -1,29 +1,33 @@
 import React from 'react'
 import { ArrowRight } from 'lucide-react'
 import { motion } from 'framer-motion'
+import YogaForNation from '../assets/YogaForNation.png'
+import GuptaLawOffices from '../assets/GuptaLawOffices.png'
+import QMS from '../assets/QMS.png'
 
 function Projects() {
 
     const recentProjects = [
-    {
-      title: "E-commerce Platform for Retailer X",
-      description: "Developed a scalable e-commerce solution with custom features, leading to a 30% increase in online sales.",
-      image: "/placeholder.svg?height=400&width=600",
-      category: "Web Development",
-    },
-    {
-      title: "Mobile App for Fitness Startup",
-      description: "Designed and built an intuitive fitness tracking mobile app for iOS and Android, achieving 10k+ downloads in first month.",
-      image: "/placeholder.svg?height=400&width=600",
-      category: "Mobile App Development",
-    },
-    {
-      title: "Brand Identity & Marketing Campaign for TechCo",
-      description: "Created a cohesive brand identity and launched a successful digital marketing campaign, boosting brand recognition by 45%.",
-      image: "/placeholder.svg?height=400&width=600",
-      category: "Digital Marketing",
-    },
-  ];
+  {
+    title: "GuptaLawOffices: Legal Services Website",
+    description: "Developed a professional and fully responsive website for a law firm with service pages, case categories, and contact management.",
+    image: GuptaLawOffices,
+    category: "Web Development",
+  },
+  {
+    title: "Mobile App for Yoga Startup",
+    description: "Designed and developed a user-friendly yoga and wellness mobile app with live classes, progress tracking, and personalized sessions.",
+    image: YogaForNation,
+    category: "Mobile App Development",
+  },
+  {
+    title: "CRM Quotation Management System",
+    description: "Built a complete CRM-based quotation management system with automated quote generation, customer tracking, and reporting features.",
+    image: QMS,
+    category: "CRM Development",
+  },
+];
+
 
   // Container animation variants
   const containerVariants = {
@@ -84,7 +88,7 @@ function Projects() {
 
   return (
 
-      <section id="portfolio" className="py-20">
+      <section id="portfolio" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           className="text-center mb-16"
@@ -124,14 +128,14 @@ function Projects() {
                 transition={{ duration: 0.6, ease: "easeOut" }}
               >
                 <img
-                  src={project.image || "/placeholder.svg"}
+                  src={project.image}
                   alt={project.title}
                   className="w-full h-60 object-cover"
                 />
                 <motion.div
                   className="absolute inset-0 bg-opacity-0"
                   whileHover={{ 
-                    backgroundColor: "rgba(37, 99, 235, 0.1)",
+                    // backgroundColor: "rgba(37, 99, 235, 0.1)",
                     transition: { duration: 0.3 }
                   }}
                 />
@@ -139,7 +143,7 @@ function Projects() {
               
               <div className="p-6">
                 <motion.span 
-                  className="text-sm font-semibold text-blue-600 uppercase tracking-wide mb-2 block"
+                  className="text-sm font-semibold text-black uppercase tracking-wide mb-2 block"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ delay: 0.2 }}
@@ -167,7 +171,7 @@ function Projects() {
                 
                 <motion.a 
                   href="#" 
-                  className="text-blue-600 hover:text-blue-700 font-medium flex items-center group"
+                  className="text-black hover:text-gray-700 font-medium flex items-center group"
                   initial={{ opacity: 0, x: -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.5 }}
@@ -200,10 +204,10 @@ function Projects() {
           viewport={{ once: true }}
         >
           <motion.button 
-            className="bg-blue-600 text-white px-8 py-4 rounded-lg font-medium relative overflow-hidden"
+            className="bg-black text-white px-8 py-4 rounded-lg font-medium relative overflow-hidden"
             whileHover={{ 
               scale: 1.05,
-              backgroundColor: "#1d4ed8",
+              backgroundColor: "#000000",
               boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
             }}
             whileTap={{ scale: 0.98 }}
@@ -217,7 +221,7 @@ function Projects() {
               View All Projects
             </motion.span>
             <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-blue-700 to-purple-600 opacity-0"
+              className="absolute inset-0 bg-black  opacity-0"
               whileHover={{ opacity: 1 }}
               transition={{ duration: 0.3 }}
             />

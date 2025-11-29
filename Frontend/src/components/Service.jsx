@@ -144,10 +144,10 @@ function Service() {
           variants={containerVariants}
         >
           <div>
-            <motion.h2 variants={itemVariants} className="text-4xl font-bold text-gray-900 mb-2">
+            <motion.h2 variants={itemVariants} className="text-4xl font-bold text-black mb-2">
               Our Services
             </motion.h2>
-            <motion.p variants={itemVariants} className="text-gray-600">
+            <motion.p variants={itemVariants} className="text-gray-900">
               Professional services delivered by expert freelancers
             </motion.p>
           </div>
@@ -161,7 +161,7 @@ function Service() {
               whileTap={{ scale: 0.9 }}
               className={`p-2 rounded-full transition-colors ${
                 canScrollLeft
-                  ? "bg-white shadow-md hover:bg-gray-50 text-gray-700"
+                  ? "bg-white shadow-md hover:bg-gray-50 text-black"
                   : "bg-gray-200 text-gray-400 cursor-not-allowed"
               }`}
             >
@@ -174,7 +174,7 @@ function Service() {
               whileTap={{ scale: 0.9 }}
               className={`p-2 rounded-full transition-colors ${
                 canScrollRight
-                  ? "bg-white shadow-md hover:bg-gray-50 text-gray-700"
+                  ? "bg-white shadow-md hover:bg-gray-50 text-black"
                   : "bg-gray-200 text-gray-400 cursor-not-allowed"
               }`}
             >
@@ -213,7 +213,7 @@ function Service() {
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute top-3 left-3">
-                    <span className="bg-white px-2 py-1 rounded-full text-xs font-medium text-gray-700">
+                    <span className="bg-white px-2 py-1 rounded-full text-xs font-medium text-black">
                       {service.category}
                     </span>
                   </div>
@@ -226,11 +226,11 @@ function Service() {
                       <div className="flex items-center space-x-1 mb-2">
                         <Star className="w-4 h-4 text-yellow-400 fill-current" />
                         <span className="text-sm font-medium text-gray-900">{service.rating}</span>
-                        <span className="text-sm text-gray-500">(127)</span>
+                        <span className="text-sm text-black">(127)</span>
                       </div>
                     </div>
                   </div>
-                  <p className="text-gray-600 text-sm mb-4 line-clamp-2">{service.description}</p>
+                  <p className="text-gray-900 text-sm mb-4 line-clamp-2">{service.description}</p>
                   {/* Features */}
                   <div className="grid grid-cols-2 gap-2 mb-4">
                     {service.features.slice(0, 4).map((feature, idx) => (
@@ -257,7 +257,7 @@ function Service() {
                   <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-medium transition-colors text-sm"
+                    className="w-full mt-4 bg-black hover:bg-gray-900 text-white py-2 px-4 rounded-lg font-medium transition-colors text-sm"
                   >
                     Get Started
                   </motion.button>
@@ -272,7 +272,7 @@ function Service() {
             {Array.from({ length: Math.ceil(services.length / 3) }).map((_, index) => (
               <div key={index} className="w-2 h-2 rounded-full bg-gray-300"></div>
             ))}
-            <div className="w-8 h-2 rounded-full bg-blue-600"></div>
+            <div className="w-8 h-2 rounded-full bg-black"></div>
             {Array.from({ length: Math.ceil(services.length / 3) - 1 }).map((_, index) => (
               <div key={index} className="w-2 h-2 rounded-full bg-gray-300"></div>
             ))}
